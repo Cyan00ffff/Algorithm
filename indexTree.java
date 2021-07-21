@@ -91,7 +91,7 @@ public class Main {
         //연관 있음 -> 현재 노드에 diff 반영 -> 자식에게 diff 전달
         if(target<=right&&target>=left){
             tree[node]+=diff;
-            if(node<S){
+            if(node<S){//혹은 if(left!=right)
                 update(left, (left+right)/2, node*2, target, diff);
                 update((left+right)/2+1, right, node*2+1, target, diff);
             }
